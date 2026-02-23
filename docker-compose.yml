@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    networks:
+      - mean-network
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: backend
+    networks:
+      - mean-network
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    networks:
+      - mean-network
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+networks:
+  mean-network:
+
+volumes:
+  mongo-data:
