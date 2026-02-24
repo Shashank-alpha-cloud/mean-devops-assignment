@@ -51,3 +51,9 @@ docker-compose up --build
 ## CI/CD Pipeline Execution
 
 ![CI/CD Success](screenshots/github-actions-success.jpg)
+
+Access application
+http://localhost
+
+
+
