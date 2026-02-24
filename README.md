@@ -45,3 +45,7 @@ To run locally:
 
 ```bash
 docker-compose up --build
+
+## CI/CD Pipeline Execution
+
+![CI/CD Success](screenshots/github-actions-success.jpg)
